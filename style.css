@@ -1,0 +1,203 @@
+/* Index */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin : 0;
+    padding : 0;
+}
+#header .on{
+    color : red;
+}
+#header{
+    display : flex;
+    flex-wrap : wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align : center; */
+}
+header{
+    width : 90%;
+    margin : auto;
+    height : 16vh;
+}
+#header img{
+    width : 50%;
+}
+#header .content ul{
+    list-style : none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight : 600;
+    font-size : 14px;
+}
+#header .content ul{
+    display : flex;
+    gap : 20px;
+    flex-direction: row;
+}
+#main{
+    height : 84vh;
+    background-image : url('images/photo2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position : center;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height : 84vh;
+}
+#main .main-content{
+    width : 50%;
+    height : 60vh;
+    background-color : rgba(0, 0, 0, 0.616);
+    color : #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size : 20px;
+    text-transform : uppercase;
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items : center;
+    text-align : center;
+    font-weight : 400;
+}
+#main .mid{
+    margin : 60px 0px;
+}
+#footer{
+    text-align : center;
+    background-color : #000;
+    color : #fff;
+}
+#footer h1{
+    font-size : 20px;
+    font-family : 'Roboto', sans-serif;
+    font-weight : 300;
+    padding-top : 10px;
+}
+#footer ul{
+    padding : 20px 0px;
+    font-size : 26px;
+    list-style : none;
+    display : flex;
+    justify-content : center;
+    gap : 30px;
+    font-weight : 300;
+}
+a{
+    text-decoration : none;
+    color : #000;
+}
+#header ul li{
+    position : relative;
+    cursor : pointer;
+}
+#header ul li:hover>ul li{
+    display : block;
+}
+#header ul li ul{
+    position : absolute;
+    top : 25px;
+    width : 140%;
+    border-radius : 6px;
+    padding : 5px 0px;
+}
+#header ul li ul li{
+    display : none;
+}
+/* Student_login */
+#student_login{
+    height : 84vh;
+    background-image : url('images/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color : #fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+#student_login .login_base{
+    text-align : center;
+    width : 50%;
+    height : 70vh;
+    background-color : rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto', sans-serif;
+}
+#student_login h1{
+    margin-top : 25px;
+    font-size : 30px;
+}
+#student_login input{
+    width : 20em;
+    height : 3em;
+    padding-left : 10px;
+    margin : 15px;
+    outline : none;
+    border : 1px solid transparent;
+}
+#student_login button{
+    width : 8em;
+    height : 3em;
+    border : 1px solid transparent;
+    margin-top : 10px;
+    cursor : pointer;
+}
+#student_login h1,h2{
+    font-weight : 300;
+}
+#student_login a{
+    color : #fff;
+    font-size : 10px;
+}
+#student_login h2{
+    margin-top : 20px;
+}
+
+/* Registration */
+#registration{
+    height : 84vh;
+    background-image : url('images/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color : #fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+#registration .registration_base{
+    text-align : center;
+    width : 50%;
+    height : 70vh;
+    background-color : rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto', sans-serif;
+}
+#registration h1{
+    margin-top : 25px;
+    font-size : 30px;
+}
+#registration input{
+    width : 20em;
+    height : 3em;
+    padding-left : 10px;
+    margin : 15px;
+    outline : none;
+    border : 1px solid transparent;
+}
+#registration button{
+    width : 8em;
+    height : 3em;
+    border : 1px solid transparent;
+    margin-top : 10px;
+    cursor : pointer;
+}
+#registration h1,h2{
+    font-weight : 300;
+}
+#registration h2{
+    margin-top : 20px;
+}
+#registration a{
+    color : #fff;
+    font-size : 10px;
+}
