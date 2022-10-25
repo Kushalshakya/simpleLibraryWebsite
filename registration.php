@@ -38,13 +38,25 @@
                 <h1>Library Management System</h1>
                 <h1>Student SignUp Form</h1><br>
                 <input type="text" placeholder="Username" name="username" autocomplete="off" required spellcheck="false"><br>
+                <input type="number" placeholder="RollNo" name="rollno" autocomplete="off"><br>
                 <input type="password" placeholder="Password" name="password" autocomplete="off" required spellcheck="false"><br>
-                <button name="login">Register</button>
+                <button name="login" id="login">Register</button>
                 <a href="student_login.php">
                     <h2>Already a user? <u>Login</u></h2>
                 </a>
             </div>
         </section>
     </form>
+    <?php
+        $db = mysqli_connect("localhost","root","","weblibrary");
+
+        if(isset($_POST['login'])){
+            if(mysqli_query($db, "INSERT INTO `data` VALUES ('$_POST[username]', '$_POST[password]');")){
+                header('location:./student_login.php');
+                echo '<script>alert("Registration Successful. Please Login")</script>';
+            }
+        }
+    ?>
+    <script src="script.js" defer></script>
 </body>
 </html>
