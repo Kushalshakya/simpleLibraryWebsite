@@ -1,0 +1,11 @@
+@media (max-width : 700px){
+    #main .main-content{
+        width : 80%;
+    }
+    #registration .registration_base{
+        width : 90%;
+    }
+    #student_login .login_base{
+        width : 90%;
+    }
+}

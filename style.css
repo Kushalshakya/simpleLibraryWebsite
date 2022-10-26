@@ -40,12 +40,9 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position : center;
-}
-#main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height : 84vh;
 }
 #main .main-content{
     width : 50%;
