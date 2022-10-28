@@ -1,10 +1,18 @@
 # simpleLibraryWebsite
   This is a simpleLibraryWebsite. Basic Programming languages like html, css , php, javascript has been used in the development of the project.
-
-Please Consider creating a Database named `weblibrary` for login credentials or for signup with the table name `data` with badgeid, username & password field.
     
-#Requirements
+# Requirements
 
+Please Consider Creating the followings :
 ```
-  Database Name - `weblibrary`
+  Database Name - weblibrary
+```
+```
+  Table Name -data with badgeid, username & password field
+```
+```
+  Table Name -books with bid, name, authors, status, quantity & department field
+```
+```
+  Table Name -feedback with id & comment field
 ```
