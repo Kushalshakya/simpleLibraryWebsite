@@ -15,3 +15,10 @@ Please Consider Creating the followings :
 ```
   Table Name - feedback with id & comment field
 ```
+
+Please Consider Changing the server, username, password & dbName according to your setup on connection.php
+```
+  <?php
+    $db = mysqli_connect("localhost","root","","weblibrary");
+  ?>
+```
