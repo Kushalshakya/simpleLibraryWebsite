@@ -18,7 +18,7 @@
             <div class="content">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="">Books</a></li>
+                    <li><a href="books.php">Books</a></li>
                     <li><a href="student_login.php" class="on">Student_Login</a>
                         <ul>
                             <li>
@@ -28,8 +28,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="">Admin_login</a></li>
-                    <li><a href="">FeedBack</a></li>
+                    <li><a href="admin_login.php">Admin_login</a></li>
+                    <li><a href="feedback.php">FeedBack</a></li>
                 </ul>
             </div>
         </div>

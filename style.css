@@ -117,7 +117,8 @@ a{
 #student_login .login_base{
     text-align : center;
     width : 50%;
-    height : 70vh;
+    height : 75vh;
+    padding-bottom : 20px;
     background-color : rgba(0, 0, 0, 0.6);
     font-family: 'Roboto', sans-serif;
 }
@@ -197,4 +198,155 @@ a{
 #registration a{
     color : #fff;
     font-size : 10px;
+}
+
+/* Books */
+#books h1{
+    font-family : 'Roboto', sans-serif;
+    font-weight : 400;
+    font-size : 35px;
+    letter-spacing: 1px;
+    margin-top : 20px;
+}
+#books table{
+    width : 100%;
+    text-align : left;
+    font-family : 'Roboto', sans-serif;
+    margin-top : 20px;
+}
+#books table,
+#books tr,
+#books th,
+#books td{
+    border : 1px solid rgba(0, 0, 0, 0.6);
+    border-collapse: collapse;
+    padding-left : 10px;
+}
+#books th{
+    font-size : 18px;
+    padding : 10px 0px 10px 10px;
+}
+#books td{
+    padding : 10px 0px 10px 10px;
+}
+#books tr:hover{
+    background-color :rgba(0, 0, 0, 0.2);
+    cursor : pointer;
+}
+#books table th:nth-child(1){
+    width : 10%;
+}
+#books table th:nth-child(2){
+    width : 30%;
+}
+#books table th:nth-child(3){
+    width : 20%;
+}
+#books table th:nth-child(4){
+    width : 7%;
+}
+#books table th:nth-child(5){
+    width : 10%;
+}
+#books table th:nth-child(6){
+    width : 7%;
+}
+#books table th:nth-child(7){
+    width : 16%;
+}
+/* #books tr:nth-child(2n+1){
+    background-color : rgba(0, 0, 0, 0.2);
+} */
+#books .book_search{
+    display : flex;
+    align-items : center;
+    width : 100%;
+    height : 10vh;
+    justify-content: center;
+    gap : 10px;
+    font-family : 'Roboto', sans-serif;
+    margin-top : 20px;
+}
+#books input{
+    padding : 15px;
+    outline : none;
+    width : 30%;
+    border : 1px solid rgba(0, 0, 0, 0.2);
+}
+#books button{
+    padding : 13px 20px;
+    border : 1px solid rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+/* Feedback */
+#feedback{
+    height : 84vh;
+    background-image : url('images/feedback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position : center;
+    color : #fff;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}
+#feedback .feedback_base{
+    width : 50%;
+    height : 80vh;
+    background-color : rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto', sans-serif;
+}
+#feedback h1{
+    font-size : 20px;
+    font-weight : 400;
+    padding-top : 10px;
+    padding-left : 10px;
+}
+#feedback textarea{
+    margin-top : 10px;
+    margin-left : 10px;
+    resize : none;
+    width : 95%;
+    font-size : 20px;
+    padding-top : 10px;
+    padding-left : 10px;
+    outline : none;
+    height : 40vh;
+    border : none;
+    font-family : 'Roboto', sans-serif;
+}
+#feedback button{
+    margin-top : 10px;
+    margin-left : 10px;
+    padding : 10px 25px;
+    border : 1px solid #FFD801;
+    cursor : pointer;
+    text-transform : uppercase;
+    background-color : #FFD801;
+    color : #000;
+    font-size : 16px;
+    font-family : 'Roboto', sans-serif;
+}
+#feedback .scroll{
+    width : 95%;
+    margin : auto;
+    height : 21vh;
+    overflow : auto;
+    color : #fff;
+}
+#feedback table{
+    width : 98%;
+    padding : 10px 0px;
+}
+#feedback td{
+    background-color :rgba(0, 0, 0, 0.2);
+    width : 90%;
+    padding : 10px 10px;
+    border : 1px solid #fff;
+}
+@media (max-width : 800px){
+    #feedback .feedback_base{
+        width : 90%;
+    }
 }
