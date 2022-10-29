@@ -44,19 +44,20 @@
                 <div class="scroll">
                     <?php
                         include "connection.php";
+                        $sql = "INSERT INTO `feedback` VALUES ('','$_POST[comment]');";
                         if(isset($_POST['comment_btn'])){
-                            $sql = "INSERT INTO `feedback` VALUES ('','$_POST[comment]');"; 
-                            if(mysqli_query($db,$sql)){
-                                $cmt = "SELECT * FROM `feedback` ORDER BY `feedback`.`id` DESC";
-                                $res = mysqli_query($db,$cmt);
-                                echo "<table>";
-                                while($row = mysqli_fetch_assoc($res)){
-                                    echo "<tr>";
-                                    echo "<td>"; echo $row['comment']; echo "</td>";
-                                    echo "</tr>";
-                                }
-                                echo "</table>";
+                            mysqli_query($db,$sql);
+                        }
+                        if(mysqli_query($db,$sql)){
+                            $cmt = "SELECT * FROM `feedback` ORDER BY `feedback`.`id` DESC";
+                            $res = mysqli_query($db,$cmt);
+                            echo "<table>";
+                            while($row = mysqli_fetch_assoc($res)){
+                                echo "<tr>";
+                                echo "<td>"; echo $row['comment']; echo "</td>";
+                                echo "</tr>";
                             }
+                            echo "</table>";
                         }
                     ?>
                 </div>
