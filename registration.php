@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div id="header">
             <div class="logo">
                 <img src="images/logo.jpg">
@@ -33,7 +33,10 @@
                 </ul>
             </div>
         </div>
-    </header>
+    </header> -->
+    <?php
+        include "navbar.php";
+    ?>
     <form action="" method="post">
         <section id="registration">
             <div class="registration_base">

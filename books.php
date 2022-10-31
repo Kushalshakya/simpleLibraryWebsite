@@ -46,6 +46,38 @@
         <h1>List of Books</h1>
         <?php
             include "connection.php";
+
+            if(isset($_POST['search_box'])){
+                $search = mysqli_query($db,"SELECT * FROM `books` WHERE name LIKE '%$_POST[book_search]%' ");
+                if(mysqli_num_rows($search) == 0){
+                    echo "Sorry! No book found. Try searching again";
+                }
+                else{
+                    echo "<table>";
+                        echo "<tr style='background-color:white'>";
+                            echo "<th>"; echo"BID"; echo"</th>";
+                            echo "<th>"; echo"Name"; echo"</th>";
+                            echo "<th>"; echo"Authors"; echo"</th>";
+                            echo "<th>"; echo"Edition"; echo"</th>";
+                            echo "<th>"; echo"Status"; echo"</th>";
+                            echo "<th>"; echo"Quantity"; echo"</th>";
+                            echo "<th>"; echo"Department"; echo"</th>";
+                        echo"</tr>";
+                    while($rows = mysqli_fetch_assoc($search)){
+                        echo "<tr>";
+                            echo "<td>"; echo $rows['bid']; echo "</td>";
+                            echo "<td>"; echo $rows['name']; echo "</td>";
+                            echo "<td>"; echo $rows['authors']; echo "</td>";
+                            echo "<td>"; echo $rows['edition']; echo "</td>";
+                            echo "<td>"; echo $rows['status']; echo "</td>";
+                            echo "<td>"; echo $rows['quantity']; echo "</td>";
+                            echo "<td>"; echo $rows['department']; echo "</td>";
+                        echo "</tr>";
+                    }
+                    echo"</table>";    
+                }
+            }
+        else{
             $res = mysqli_query($db,"SELECT * FROM `books` ORDER BY `books`.`name` ASC;");
             echo "<table>";
             echo "<tr style='background-color:white'>";
@@ -69,6 +101,7 @@
                 echo "</tr>";
             }
             echo"</table>";
+        }
         ?>
     </section>
 </body>
