@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div id="header">
             <div class="logo">
                 <img src="images/logo.jpg">
@@ -33,13 +33,15 @@
                 </ul>
             </div>
         </div>
-    </header>
+    </header> -->
+    <?php
+        include "navbar.php";
+    ?>
     <form action="" method="post">
         <section id="student_login">
             <div class="login_base">
                 <h1>Library Management System</h1>
                 <h1>Student Login Form</h1><br>
-                <input type="text" placeholder="Badge ID" name="badgeid" autocomplete="off" required spellcheck="false"><br>
                 <input type="text" placeholder="Username" name="username" autocomplete="off" required spellcheck="false"><br>
                 <input type="password" placeholder="Password" name="password" autocomplete="off" required spellcheck="false"><br>
                 <button name="login">Login</button>
@@ -56,7 +58,7 @@
         include "connection.php";
         if(isset($_POST['login'])){
             $count = 0;
-            $res = mysqli_query($db, "SELECT * FROM `data` WHERE badgeid='$_POST[badgeid]' && username='$_POST[username]' && password='$_POST[password]';");
+            $res = mysqli_query($db, "SELECT * FROM `data` WHERE username='$_POST[username]' && password='$_POST[password]';");
             $count = mysqli_num_rows($res);
             if($count == 0){
             echo'<script>alert("Login Credentials Doesnot match.")</script>';

@@ -44,21 +44,29 @@
                 <div class="scroll">
                     <?php
                         include "connection.php";
-                        $sql = "INSERT INTO `feedback` VALUES ('','$_POST[comment]');";
                         if(isset($_POST['comment_btn'])){
-                            mysqli_query($db,$sql);
+                            $sql = "INSERT INTO `feedback` VALUES ('','$_POST[comment]');";
+                            if(mysqli_query($db,$sql)){
+                                $cmt = "SELECT * FROM `feedback` ORDER BY `feedback`.`id` DESC";
+                                $res = mysqli_query($db,$cmt);
+                                echo "<table>";
+                                while($row = mysqli_fetch_assoc($res)){
+                                    echo "<tr>";
+                                        echo "<td>"; echo $row['comment']; echo "</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</table>";
+                            }
                         }
-                        if(mysqli_query($db,$sql)){
-                            $cmt = "SELECT * FROM `feedback` ORDER BY `feedback`.`id` DESC";
-                            $res = mysqli_query($db,$cmt);
-                            echo "<table>";
-                            while($row = mysqli_fetch_assoc($res)){
+                        $display = "SELECT * FROM `feedback` ORDER BY `feedback`.`id` DESC";
+                        $connect = mysqli_query($db,$display);
+                        echo "<table>";
+                            while($dp = mysqli_fetch_assoc($connect)){
                                 echo "<tr>";
-                                echo "<td>"; echo $row['comment']; echo "</td>";
+                                    echo "<td>"; echo $dp['comment']; echo "</td>";
                                 echo "</tr>";
                             }
-                            echo "</table>";
-                        }
+                        echo "</table>";
                     ?>
                 </div>
             </form>

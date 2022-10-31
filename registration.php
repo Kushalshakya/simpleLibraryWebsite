@@ -51,8 +51,7 @@
         </section>
     </form>
     <?php
-        $db = mysqli_connect("localhost","root","","weblibrary");
-
+        include "connection.php";
         if(isset($_POST['login'])){
             if(mysqli_query($db, "INSERT INTO `data` VALUES ('$_POST[badgeid]','$_POST[username]', '$_POST[password]');")){
                 header('location:./student_login.php');

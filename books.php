@@ -43,31 +43,6 @@
                 <button name="search_box">Search</button>
             </div>
         </form>
-            <!-- include "connection.php";
-            if(isset($_POST['search_box'])){
-                $book = mysqli_query($db,"SELECT * FROM `books` WHERE bid='$_POST(book_search)';");
-                echo "<table>";
-                echo "<tr style='background-color:white'>";
-                    echo "<th>"; echo"BID"; echo"</th>";
-                    echo "<th>"; echo"Name"; echo"</th>";
-                    echo "<th>"; echo"Authors"; echo"</th>";
-                    echo "<th>"; echo"Edition"; echo"</th>";
-                    echo "<th>"; echo"Status"; echo"</th>";
-                    echo "<th>"; echo"Quantity"; echo"</th>";
-                    echo "<th>"; echo"Department"; echo"</th>";
-                echo"</tr>";
-                while($display = mysqli_fetch_assoc($book)){
-                    echo "<tr>";
-                        echo "<td>"; echo $display['bid']; echo "</td>";
-                        echo "<td>"; echo $display['name']; echo "</td>";
-                        echo "<td>"; echo $display['authors']; echo "</td>";
-                        echo "<td>"; echo $display['edition']; echo "</td>";
-                        echo "<td>"; echo $display['status']; echo "</td>";
-                        echo "<td>"; echo $display['quantity']; echo "</td>";
-                        echo "<td>"; echo $display['department']; echo "</td>";
-                    echo "</tr>";
-                }
-            } -->
         <h1>List of Books</h1>
         <?php
             include "connection.php";
@@ -96,6 +71,5 @@
             echo"</table>";
         ?>
     </section>
-    <!-- bid, name, authors, edition, status, quantity, department -->
 </body>
 </html>

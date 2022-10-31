@@ -46,13 +46,16 @@
         <div id="footer">
             <h1>Need Any help?</h1>
             <h1>Contact us at : librariansupervisor@gmail.com</h1>
+        </div>
+        <div class="icons">
             <ul>
-                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-facebook" style="line-height:10px;"></i></li>
                 <li><i class="fa fa-instagram"></i></li>
                 <li><i class="fa fa-twitter"></i></li>
                 <li><i class="fa fa-vk"></i></li>
             </ul>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
