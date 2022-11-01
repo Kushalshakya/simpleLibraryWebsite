@@ -1,3 +1,6 @@
+<?php
+    include "session_start.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,38 +12,47 @@
     <link rel="icon" href="logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="responsive.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 <body>
-    <header>
-        <div id="header">
-            <div class="logo">
-                <img src="images/logo.jpg">
-            </div>
+    <section class="nb">
+        <div id="navbar">
             <div class="content">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="books.php" class="on">Books</a></li>
-                    <li><a href="student_login.php">Student_Login</a>
-                        <ul>
-                            <li>
-                                <a href="registration.php">
-                                    Create Account
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="admin_login.php">Admin_login</a></li>
-                    <li><a href="feedback.php">FeedBack</a></li>
-                </ul>
+                <div class="logo">
+                    <h1>Library</h1>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="books.php" class="on">Books</a></li>
+                        <li><a href="feedback.php">FeedBack</a></li>
+                    </ul>
+                </div>
             </div>
+            <?php
+                if(isset($_SESSION['login_user'])){
+                    ?>
+                    <div class="session">
+                        <h2><?php echo "Welcome " . $_SESSION['login_user'];?></h2>
+                        <h2><i class="fa fa-sign-out"></i><a href="session_end.php">Logout</a></h2>
+                    </div>
+                    <?php
+                }
+                else{
+                ?>
+                <div class="session">
+                    <h2><i class="fa fa-sign-in"></i><a href="student_login.php">Login</a></h2>
+                    <h2><i class="fa fa-user"></i><a href="registration.php">Sign Up</a></h2>
+                </div>
+                <?php  
+                }
+            ?>
         </div>
-    </header>
+    </section>
     <section id="books">
         <form action="" method="post">
             <div class="book_search">
                 <input type="search" placeholder="Search For Books" autocomplete="off" spellcheck="false" name="book_search">
-                <button name="search_box">Search</button>
+                <button name="search_box" style="cursor:pointer;">Search</button>
             </div>
         </form>
         <h1>List of Books</h1>

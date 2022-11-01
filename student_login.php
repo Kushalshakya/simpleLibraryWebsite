@@ -1,3 +1,7 @@
+<?php
+    // session_start();
+    include "session_start.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +39,7 @@
         </div>
     </header> -->
     <?php
-        include "navbar.php";
+        include "navbar_login.php";
     ?>
     <form action="" method="post">
         <section id="student_login">
@@ -65,8 +69,10 @@
             }
             else{
                 if($res){
-                    header('location:./index.php');
+                    $_SESSION['login_user'] = $_POST['username'];
                     echo '<script>alert("Login Successful")</script>';
+                    echo "<script> window.location.href = 'index.php'  </script>";
+                    // header('location:./index.php');
                 }
             }
         }

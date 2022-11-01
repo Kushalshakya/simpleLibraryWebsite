@@ -7,6 +7,9 @@
 #header .on{
     color : red;
 }
+#navbar .list .on{
+    color : red;
+}
 #header{
     display : flex;
     flex-wrap : wrap;
@@ -22,14 +25,14 @@ header{
 #header img{
     width : 50%;
 }
-#header .content ul{
+#header ul{
     list-style : none;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight : 600;
     font-size : 14px;
 }
-#header .content ul{
+#header ul{
     display : flex;
     gap : 20px;
     flex-direction: row;
@@ -112,6 +115,68 @@ header{
 #header ul li ul li{
     display : none;
 }
+/* Navbar */
+.nb{
+    background-color : rgba(0,0,0,0.6);
+    color : rgba(255, 255, 255, 0.808);
+}
+#navbar{
+    width : 90%;
+    margin : auto;
+    display : flex;
+    justify-content : space-between;
+    font-family : 'Roboto', sans-serif;
+    align-items: center;
+    height : 10vh;
+}
+#navbar .content{
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+}
+#navbar .list{
+    margin-left : 40px;
+}
+#navbar .list ul{
+    list-style : none;
+    display : flex;
+    gap : 20px;
+    flex-direction : row;
+    font-size : 15px;
+    font-weight : 600;      
+}
+#navbar .list ul li{
+    cursor : pointer;
+}
+#navbar .session{
+    text-transform : uppercase;
+    display : flex;
+    flex-direction: row;
+    gap : 25px;
+    font-size : 10px;
+}
+#navbar i{
+    margin-right : 10px;
+}
+#navbar .content{
+    text-transform : uppercase;
+}
+#navbar h1{
+    font-size : 30px;
+}
+#navbar .session h2{
+    cursor : pointer;
+}
+@media (max-width : 850px){
+    #navbar .session{
+        display : none;
+    }
+}
+#navbar a{
+    color : rgba(255, 255, 255, 0.808);
+    text-decoration : none;
+}
+
 /* Student_login */
 #student_login{
     height : 90vh;
@@ -221,7 +286,7 @@ header{
     width : 100%;
     text-align : left;
     font-family : 'Roboto', sans-serif;
-    margin-top : 20px;
+    margin : 20px 0px;
 }
 #books table,
 #books tr,
@@ -234,6 +299,7 @@ header{
 #books th{
     font-size : 18px;
     padding : 10px 0px 10px 10px;
+    background-color : #87CEEB;
 }
 #books td{
     padding : 10px 0px 10px 10px;
@@ -283,14 +349,18 @@ header{
     border : 1px solid rgba(0, 0, 0, 0.2);
 }
 #books button{
+    font-family : 'Roboto', sans-serif;
     padding : 13px 20px;
-    border : 1px solid rgba(0, 0, 0, 0.2);
+    border : 1px solid #87CEEB;
     text-transform: uppercase;
+    background-color : #87CEEB;
+    color : #fff;
+    letter-spacing : 1px;
 }
 
 /* Feedback */
 #feedback{
-    height : 84vh;
+    height : 90vh;
     background-image : url('images/feedback.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -302,7 +372,7 @@ header{
 }
 #feedback .feedback_base{
     width : 50%;
-    height : 80vh;
+    height : 85vh;
     background-color : rgba(0, 0, 0, 0.6);
     font-family: 'Roboto', sans-serif;
 }

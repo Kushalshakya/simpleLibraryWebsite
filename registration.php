@@ -10,32 +10,8 @@
     <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-    <!-- <header>
-        <div id="header">
-            <div class="logo">
-                <img src="images/logo.jpg">
-            </div>
-            <div class="content">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="books.php">Books</a></li>
-                    <li><a href="student_login.php" class="on">Student_Login</a>
-                        <ul>
-                            <li>
-                                <a href="registration.php">
-                                    Create Account
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="admin_login.php">Admin_login</a></li>
-                    <li><a href="feedback.php">FeedBack</a></li>
-                </ul>
-            </div>
-        </div>
-    </header> -->
     <?php
-        include "navbar.php";
+        include "navbar_signup.php";
     ?>
     <form action="" method="post">
         <section id="registration">
@@ -57,8 +33,9 @@
         include "connection.php";
         if(isset($_POST['login'])){
             if(mysqli_query($db, "INSERT INTO `data` VALUES ('$_POST[badgeid]','$_POST[username]', '$_POST[password]');")){
-                header('location:./student_login.php');
                 echo '<script>alert("Registration Successful. Please Login")</script>';
+                echo "<script> window.location.href = 'student_login.php' </script>";
+                // header("location:student_login.php");
             }
         }
     ?>

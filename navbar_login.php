@@ -13,6 +13,9 @@
         margin : 0;
         padding : 0;
     }
+    html{
+        font-size : 62.5%;
+    }
     .nb{
         background-color : rgba(0,0,0,0.6);
         color : rgba(255, 255, 255, 0.808);
@@ -39,7 +42,7 @@
         display : flex;
         gap : 20px;
         flex-direction : row;
-        font-size : 15px;
+        font-size : 1.5rem;
         font-weight : 600;      
     }
     #navbar .list ul li{
@@ -50,7 +53,6 @@
         display : flex;
         flex-direction: row;
         gap : 25px;
-        font-size : 10px;
     }
     #navbar i{
         margin-right : 10px;
@@ -59,12 +61,22 @@
         text-transform : uppercase;
     }
     #navbar h1{
-        font-size : 30px;
+        font-size : 3rem;
     }
     #navbar .session h2{
         cursor : pointer;
     }
-    @media (max-width : 850px){
+    @media (max-width : 998px){
+        html{
+            font-size : 50%;
+        }
+    }
+    @media (max-width : 650px){
+        html{
+            font-size : 40.625%;
+        }
+    }
+    @media (max-width : 550px){
         #navbar .session{
             display : none;
         }
@@ -90,9 +102,7 @@
                 </div>
             </div>
             <div class="session">
-                <h2><i class="fa fa-sign-in"></i>Login</h2>
-                <h2><i class="fa fa-sign-out"></i>Logout</h2>
-                <h2><i class="fa fa-user"></i>Sign Up</h2>
+                <h2><i class="fa fa-user"></i><a href="registration.php">Sign Up</a></h2>
             </div>
         </div>
     </section>

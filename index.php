@@ -1,3 +1,6 @@
+<?php
+    include "session_start.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,23 +19,40 @@
             <div class="logo">
                 <img src="images/logo.jpg">
             </div>
-            <div class="content">
-                <ul>
-                    <li><a href="index.php" class="on">Home</a></li>
-                    <li><a href="books.php">Books</a></li>
-                    <li><a href="student_login.php">Student_Login</a>
+            <?php
+                if(isset($_SESSION['login_user'])){
+                    ?>
+                    <div class="content">
                         <ul>
-                            <li>
-                                <a href="registration.php">
-                                    Create Account
-                                </a>
-                            </li>
+                            <li><a href="index.php" class="on">Home</a></li>
+                            <li><a href="books.php">Books</a></li>
+                            <li class="logout">Logout</li>
+                            <li><a href="feedback.php">FeedBack</a></li>
                         </ul>
-                    </li>
-                    <li><a href="admin_login.php">Admin_login</a></li>
-                    <li><a href="feedback.php">FeedBack</a></li>
-                </ul>
-            </div>
+                    </div>
+                    <?php
+                }
+            else{
+            ?>
+                <div class="content">
+                    <ul>
+                        <li><a href="index.php" class="on">Home</a></li>
+                        <li><a href="books.php">Books</a></li>
+                        <li><a href="student_login.php">Student_Login</a>
+                            <ul>
+                                <li>
+                                    <a href="registration.php">
+                                        Create Account
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="admin_login.php">Admin_login</a></li>
+                        <li><a href="feedback.php">FeedBack</a></li>
+                    </ul>
+                </div>
+            <?php
+            }?>
         </div>
     </header>
     <section id="main">
@@ -57,5 +77,13 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        const sessionEnd = document.querySelector('.logout')
+
+        function endSession(){
+            window.location.href = "session_end.php"
+        }
+        sessionEnd.addEventListener("click",endSession)
+    </script>
 </body>
 </html>
